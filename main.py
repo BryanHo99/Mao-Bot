@@ -5,7 +5,7 @@ from mao_bot import MaoBot
 
 def main():
     if not isfile(".env"):
-        print("\n\nNo '.env' file found.\n\nPlease make sure it is there.")
+        print("No '.env' file found.\nPlease make sure it is there.")
 
     else:
         config = dotenv_values(".env")
