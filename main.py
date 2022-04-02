@@ -1,5 +1,9 @@
+# Dependencies
 from os.path import isfile
 from dotenv import dotenv_values
+
+
+# Local imports
 from mao_bot import MaoBot
 
 

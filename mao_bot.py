@@ -3,7 +3,9 @@ from discord.ext import commands
 
 
 # Local imports
-from src.cogs.chat import ChatCog
+from cogs.chat import ChatCog
+from cogs.react_roles import ReactRolesCog
+from cogs.purge import PurgeCog
 
 
 class MaoBot(commands.Bot):
@@ -11,3 +13,5 @@ class MaoBot(commands.Bot):
         super().__init__(command_prefix=command_prefix)
 
         self.add_cog(ChatCog(self))
+        self.add_cog(ReactRolesCog(self))
+        self.add_cog(PurgeCog(self))
