@@ -4,6 +4,10 @@ from discord import Member
 
 
 class ChatCog(commands.Cog, name="Chat"):
+    """
+    Cog for bot chatting.
+    Say hi to the bot...
+    """
     def __init__(self, bot):
         super().__init__()
         self.bot = bot

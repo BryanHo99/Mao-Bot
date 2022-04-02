@@ -3,6 +3,10 @@ from discord import Embed
 
 
 class ReactRolesCog(commands.Cog, name="React Roles"):
+    """
+    Cog that allows members to react to get certain roles.
+    Currently planned to have reacts for Dota and Genshin.
+    """
     def __init__(self, bot):
         super().__init__()
         self.bot = bot
