@@ -1,6 +1,6 @@
-# Dependencies
-from discord.ext import commands
 from discord import Member
+from discord.ext import commands
+from discord.ext.commands import Context
 
 
 class ChatCog(commands.Cog, name="Chat"):
@@ -13,7 +13,7 @@ class ChatCog(commands.Cog, name="Chat"):
         self.bot = bot
 
     @commands.command(name="hello")
-    async def hello(self, ctx, member: Member=None):
+    async def hello(self, ctx: Context, member: Member=None):
         """
         Hello there...
         """

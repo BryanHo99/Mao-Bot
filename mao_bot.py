@@ -1,11 +1,8 @@
-# Dependencies
 from discord.ext import commands
 
-
-# Local imports
-from cogs.chat import ChatCog
-from cogs.react_roles import ReactRolesCog
-from cogs.purge import PurgeCog
+from cogs.chat.cog import ChatCog
+from cogs.react_roles.cog import ReactRolesCog
+from cogs.purge.cog import PurgeCog
 
 
 class MaoBot(commands.Bot):
