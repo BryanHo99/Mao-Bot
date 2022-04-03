@@ -27,3 +27,10 @@ MAO_ROLE_ID = int(getenv("MAO_ROLE_ID", ""))
 BOT_DEV_ROLE_ID = int(getenv("BOT_DEV_ROLE_ID", ""))
 GENSHIN_ROLE_ID = int(getenv("GENSHIN_ROLE_ID", ""))
 DOTA_ROLE_ID = int(getenv("DOTA_ROLE_ID", ""))
+
+# Discord message IDs.
+REACT_ROLES_MESSAGE_ID = int(getenv("REACT_ROLES_MESSAGE_ID", ""))
+
+# Discord member IDs.
+MAO_BOT_ID = int(getenv("MAO_BOT_ID", ""))
+SCARLET_SPARK_ID = int(getenv("SCARLET_SPARK_ID", ""))

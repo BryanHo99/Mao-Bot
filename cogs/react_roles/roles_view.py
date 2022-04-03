@@ -1,5 +1,6 @@
-from discord import Embed
 from abc import ABC, abstractmethod
+
+from utils.embedder import build_embed
 
 
 class RolesView(ABC):
@@ -11,7 +12,7 @@ class RolesView(ABC):
         """
         Get a Discord embed.
         """
-        embed = Embed(title=self.title, description=self.description)
+        embed = build_embed(title=self.title, description=self.description)
         return embed
 
     @staticmethod

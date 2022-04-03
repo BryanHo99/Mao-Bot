@@ -1,3 +1,4 @@
+from discord import Colour
 from discord.ext import commands
 
 from cogs.chat.cog import ChatCog
@@ -9,6 +10,7 @@ from cogs.errors.cog import ErrorsCog
 class MaoBot(commands.Bot):
     def __init__(self, command_prefix="!"):
         super().__init__(command_prefix=command_prefix)
+        self.colour = Colour.orange
 
         self.add_cog(ChatCog(self))
         self.add_cog(ReactRolesCog(self))
