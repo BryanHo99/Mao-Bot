@@ -1,6 +1,5 @@
 from discord.ext import commands
-from discord.ext.commands import Context
-from discord.ext.commands.errors import MissingRole, MissingAnyRole
+from discord.ext.commands import Context, Bot
 
 import config
 
@@ -10,7 +9,7 @@ class PurgeCog(commands.Cog, name="Purge"):
     Cog that clears the entire text channel.
     Command should only be granted to Bot Devs.
     """
-    def __init__(self, bot):
+    def __init__(self, bot: Bot):
         super().__init__()
         self.bot = bot
 
@@ -22,10 +21,4 @@ class PurgeCog(commands.Cog, name="Purge"):
         """
         await ctx.channel.purge()
 
-    @commands.Cog.listener()
-    async def on_command_error(self, ctx: Context, error: Exception):
-        """
-        Event is triggered when MissingRole error is invoked.
-        """
-        if isinstance(error, (MissingRole, MissingAnyRole)):
-            await ctx.send("You do not have access to this command.")
+

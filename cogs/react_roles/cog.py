@@ -1,4 +1,5 @@
 from discord.ext import commands
+from discord.ext.commands import Bot
 
 import config
 from cogs.react_roles.special_roles_view import SpecialRolesView
@@ -10,7 +11,7 @@ class ReactRolesCog(commands.Cog, name="React Roles"):
     Cog that allows members to react to get certain roles.
     Currently planned to have reacts for Dota and Genshin.
     """
-    def __init__(self, bot):
+    def __init__(self, bot: Bot):
         super().__init__()
         self.bot = bot
 
