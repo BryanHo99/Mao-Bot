@@ -1,5 +1,3 @@
-from os.path import isfile
-
 import config
 from mao_bot import MaoBot
 
