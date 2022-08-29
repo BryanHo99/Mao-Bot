@@ -1,3 +1,4 @@
+import config
 from cogs.react_roles.roles_view import RolesView
 
 
@@ -12,8 +13,8 @@ class ReactRolesView(RolesView):
         return (
             f"React the following roles to be notified for games.\n"
             f"A schedule system is planned to be implemented in the future which will mention these roles.\n\n"
-            f"{self.dota_emoji} <@&959713387959418991>\n"
+            f"{self.dota_emoji} <@{config.DOTA_ROLE_ID}>\n"
             f"Get this role to be notified for Dota games.\n\n"
-            f"{self.genshin_emoji} <@&959713202155974677>\n"
+            f"{self.genshin_emoji} @{config.GENSHIN_ROLE_ID}>\n"
             f"Get this role to be notified for Genshin games."
         )
